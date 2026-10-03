@@ -34,10 +34,16 @@ const UI_LANGUAGE_VALUES = new Set<BuiltInUiLanguage>([
 const PLUGIN_UI_LANGUAGE_RE =
   /^plugin:[a-z0-9]+(?:-[a-z0-9]+)*\.[a-z0-9]+(?:-[a-z0-9]+)*\/[a-z]{2,3}(?:-[a-z0-9]{2,8})*$/i
 
+/**
+ * Checks whether a value is a plugin-scoped UI language identifier.
+ */
 export function isPluginUiLanguage(value: unknown): value is PluginUiLanguage {
   return typeof value === 'string' && PLUGIN_UI_LANGUAGE_RE.test(value)
 }
 
+/**
+ * Normalizes a stored or incoming UI language value to one of the supported language IDs.
+ */
 export function normalizeUiLanguage(value: unknown): UiLanguage {
   if (isPluginUiLanguage(value)) {
     return value

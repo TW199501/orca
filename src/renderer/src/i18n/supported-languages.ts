@@ -46,6 +46,9 @@ const UI_LANGUAGE_CHOICE_FALLBACKS: Record<BuiltInUiLanguage, string> = {
   [UI_LANGUAGE_FRENCH]: 'Français'
 }
 
+/**
+ * Produces the label shown for a language choice, falling back to a default string if the catalog is missing.
+ */
 export function getUiLanguageChoiceLabel(
   choice: UiLanguageChoice,
   translateFn: (key: string, fallback: string) => string
@@ -53,6 +56,9 @@ export function getUiLanguageChoiceLabel(
   return translateFn(choice.labelKey, UI_LANGUAGE_CHOICE_FALLBACKS[choice.value])
 }
 
+/**
+ * Resolves the renderer's active locale using the current language setting and browser locale.
+ */
 export function resolveUiLocale(language: UiLanguage): string {
   return resolveRendererUiLocale(language)
 }

@@ -18,10 +18,16 @@ export const DEFAULT_UI_LOCALE: SupportedUiLocale = 'en'
 
 const TRADITIONAL_CHINESE_TAG_PREFIXES = ['zh-tw', 'zh-hk', 'zh-mo', 'zh-hant']
 
+/**
+ * Normalizes a locale tag to the same lowercase, hyphenated form used by the app.
+ */
 function normalizeLocaleTag(locale: string | undefined): string {
   return (locale ?? DEFAULT_UI_LOCALE).trim().toLowerCase().replace(/_/g, '-')
 }
 
+/**
+ * Maps any system locale to the closest supported app locale, with zh-Hant handled as Taiwan/Traditional Chinese.
+ */
 export function normalizeSupportedUiLocale(locale: string | undefined): SupportedUiLocale {
   const tag = normalizeLocaleTag(locale)
   const primary = tag.split('-')[0]
@@ -36,6 +42,9 @@ export function normalizeSupportedUiLocale(locale: string | undefined): Supporte
     : DEFAULT_UI_LOCALE
 }
 
+/**
+ * Resolves the UI locale to a built-in catalog identifier, regardless of the system locale.
+ */
 export function resolveUiLocale(
   language: UiLanguage,
   systemLocale: string | undefined = DEFAULT_UI_LOCALE
