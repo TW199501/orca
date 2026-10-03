@@ -29,6 +29,15 @@ describe('zh-Hant catalog', () => {
     expect(leaks.map(([path]) => path)).toEqual([])
   })
 
+  // Why: 計算機 / 製表符 are mainland terms; Taiwan UI copy uses 電腦 and 分頁.
+  it('uses Taiwan terms for computer and tab', () => {
+    const entries: [string, string][] = []
+    collectStrings(zhHant, '', entries)
+    expect(
+      entries.filter(([, value]) => /計算機|製表符/.test(value)).map(([path]) => path)
+    ).toEqual([])
+  })
+
   it('keeps the Simplified Chinese option in its own script', () => {
     expect(zhHant.settings.appearance.language.chinese).toBe('中文（简体）')
     expect(zhHant.settings.appearance.language.chineseTraditional).toBe('中文（繁體）')
