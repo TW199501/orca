@@ -1,0 +1,19 @@
+config/scripts/zh-hant-sync-release.mjs
+  s_6bd4fe2e6773d1::t_4d73334004d324 81-92,95-97,99
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "dd7ce7ba68edf198e0f1a1bd7094d7545324dcf3",
+  "prompts": {},
+  "sessions": {
+    "s_6bd4fe2e6773d1": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "93615184-11fc-4026-9d59-e8346cf04efd",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "楊清雲 <41539966+TW199501@users.noreply.github.com>"
+    }
+  }
+}
