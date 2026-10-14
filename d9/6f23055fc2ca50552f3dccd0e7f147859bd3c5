@@ -1,0 +1,31 @@
+config/scripts/zh-hant-sync-release.mjs
+  s_6bd4fe2e6773d1::t_193cad353c70fd 62-64,66-69,71-84
+  s_6bd4fe2e6773d1::t_4fc6bbf1b68706 2,9-10
+  s_6bd4fe2e6773d1::t_4cf69ec2dfc00a 85
+docs/zh-hant-fork.md
+  s_6bd4fe2e6773d1::t_1821ea963e3cbf 3,8-9,13-15,20
+  s_6bd4fe2e6773d1::t_4a1cee3e7bef83 57
+  s_6bd4fe2e6773d1::t_24fd46eaa0c97d 60
+  s_6bd4fe2e6773d1::t_c85cbd133d23ca 36-49,52
+AGENTS.md
+  s_6bd4fe2e6773d1::t_e3217dfc1e72b8 141-142
+BRANCHING.md
+  s_6bd4fe2e6773d1::t_0f2cd443546394 45
+  s_6bd4fe2e6773d1::t_17522116f01a9e 1-44,46-98
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "d96f23055fc2ca50552f3dccd0e7f147859bd3c5",
+  "prompts": {},
+  "sessions": {
+    "s_6bd4fe2e6773d1": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "93615184-11fc-4026-9d59-e8346cf04efd",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "楊清雲 <41539966+TW199501@users.noreply.github.com>"
+    }
+  }
+}
