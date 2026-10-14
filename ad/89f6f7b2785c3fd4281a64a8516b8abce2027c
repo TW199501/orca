@@ -1,0 +1,19 @@
+config/scripts/build-computer-macos.mjs
+  s_6bd4fe2e6773d1::t_f5ee1c666db89d 32-42
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "ad89f6f7b2785c3fd4281a64a8516b8abce2027c",
+  "prompts": {},
+  "sessions": {
+    "s_6bd4fe2e6773d1": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "93615184-11fc-4026-9d59-e8346cf04efd",
+        "model": "unknown"
+      },
+      "human_author": "楊清雲 <41539966+TW199501@users.noreply.github.com>"
+    }
+  }
+}
